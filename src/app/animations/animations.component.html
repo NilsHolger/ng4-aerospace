@@ -1,0 +1,91 @@
+<p>Ratings: Love is in the air. The will to win is nothing without the will to prepare.</p>
+<p>Todo: make some beautiful animations here ... Flying Airplanes and Space Shuttles ...</p>
+<ng-template #t let-fill="fill">
+  <span *ngIf="fill === 100" class="star full">&hearts;</span>
+  <span *ngIf="fill === 0" class="star">&hearts;</span>
+  <span *ngIf="fill < 100 && fill > 0" class="star">
+    <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+  </span>
+</ng-template>
+
+<ngb-rating [(rate)]="currentRate" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+
+<hr>
+<pre>Rate: <b>{{currentRate}}</b></pre>
+<button class="btn btn-sm btn-outline-success" (click)="currentRate = 0.97">0.97</button>
+<button class="btn btn-sm btn-outline-warning" (click)="currentRate = 3.33">3.33</button>
+<button class="btn btn-sm btn-outline-info" (click)="currentRate = 4.81">4.81</button>
+
+<hr>
+<p>Progress bars, it's all about progress ...</p>
+<p><ngb-progressbar type="success" [value]="25" [striped]="true"></ngb-progressbar></p>
+<p><ngb-progressbar type="info" [value]="50" [striped]="true"></ngb-progressbar></p>
+<p><ngb-progressbar type="warning" [value]="75" [striped]="true"></ngb-progressbar></p>
+<p><ngb-progressbar type="danger" [value]="100" [striped]="true"></ngb-progressbar></p>
+
+<hr>
+<p>Accordion</p>
+<p>hello world from ng-bootstrap.</p>
+
+<ngb-accordion #acc="ngbAccordion" activeIds="config-panel-one">
+  <ngb-panel title="One" id="config-panel-one">
+    <ng-template ngbPanelContent>
+      Work hard, be kind, do more ...
+      Motivation, Passion, Discipline, Ambition, Perseverance, Love, Technology, Dedication,
+      Commitment, Honesty, Loyalty, Continuous Learning, Humility, Joy, Have Fun, Love what you do,
+      Goals, Plans, Progress, Muse, Most Beautiful Woman in the World, Care, Marriage, Wedding Family, Babies,
+      Happiness, Fulfillment, Grow Old Together, Wealth, Education, Elite Universities, Travel, Self-Actualization,
+      Health, Fitness, Can Do Attitude,
+      Code, Code All The Time, Code With Passion, Build New Ng-Apps, Create New Tutorials, JavaScript, Angular,
+      Write A Technical Book, Do Sports, Food, Healthy, Contentment, Carpe Diem, Satisfaction, Friendship, Software,
+      Hardware, Linux, Atom, ZorinOS, Ubuntu, Debian, Mint, HTML5, CSS3, HTTP, Web, Internet, Machine Learning, AI, Neural
+      Nets, Protractor, Unit Testing, Quality, Professionalism ...
+      Create New Angular 4 Apps, Read Documentation, Write Tutorials, Contribute in Angular Repositories, Meet Her,
+      Hugs, Conversation, Laugh, Enjoy ... You only live once. Live Life to the Max.
+      If you want something in Life, you have to get it. Take Risks, Calculated Risks. Risk Lover. Risk Taker.
+      Adrenalyne. Life on the Edge. Code Edge ... I love you ... I have met my hero, he is me ... Count everything,
+      COUNT everything, calculate everything, Numbers ... YOLO!!! Source Code ... The Truth is in the Code ... Github,
+      Open Source, Future ... Technology, Spaceships, Timetravel ... I love you so much, my baby ... node_modules ...
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Two">
+    <ng-template ngbPanelContent>
+      Work hard, be kind, do more ...
+      Motivation, Passion, Discipline, Ambition, Perseverance, Love, Technology, Dedication,
+      Commitment, Honesty, Loyalty, Continuous Learning, Humility, Joy, Have Fun, Love what you do,
+      Goals, Plans, Progress, Muse, Most Beautiful Woman in the World, Care, Wedding, Marriage, Family, Babies,
+      Happiness, Fulfillment, Grow Old Together, Wealth, Education, Elite Universities, Travel, Self-Actualization,
+      Health, Fitness, Can Do Attitude,
+      Code, Code All The Time, Code With Passion, Build New Ng-Apps, Create New Tutorials, JavaScript, Angular,
+      Write A Technical Book, Do Sports, Food, Healthy, Contentment, Carpe Diem, Satisfaction, Friendship, Software,
+      Hardware, Linux, Atom, ZorinOS, Ubuntu, Debian, Mint, HTML5, CSS3, HTTP, Web, Internet, Machine Learning, AI, Neural
+      Nets, Protractor, Unit Testing, Quality, Professionalism ...
+      Create New Angular 4 Apps, Read Documentation, Write Tutorials, Contribute in Angular Repositories, Meet Her,
+      Hugs, Conversation, Laugh, Enjoy ... You only live once. Live Life to the Max.
+      If you want something in Life, you have to get it. Take Risks, Calculated Risks. Risk Lover. Risk Taker.
+      Adrenalyne. Life on the Edge. Code Edge ... I love you ... I have met my hero, he is me ... Count everything,
+      COUNT everything, calculate everything, Numbers ... YOLO!!! Source Code ... The Truth is in the Code ... Github,
+      Open Source, Future ... Technology, Spaceships, Timetravel ... I love you so much my baby ... node_modules ...
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Three">
+    <ng-template ngbPanelContent>
+      Work hard, be kind, do more ...
+      Motivation, Passion, Discipline, Ambition, Perseverance, Love, Technology, Dedication,
+      Commitment, Honesty, Loyalty, Continuous Learning, Humility, Joy, Have Fun, Love what you do,
+      Goals, Plans, Progress, Muse, Most Beautiful Woman in the World, Care, Wedding, Marriage, Family, Babies,
+      Happiness, Fulfillment, Grow Old Together, Wealth, Education, Elite Universities, Travel, Self-Actualization,
+      Health, Fitness, Can Do Attitude,
+      Code, Code All The Time, Code With Passion, Build New Ng-Apps, Create New Tutorials, JavaScript, Angular,
+      Write A Technical Book, Do Sports, Food, Healthy, Contentment, Carpe Diem, Satisfaction, Friendship, Software,
+      Hardware, Linux, Atom, ZorinOS, Ubuntu, Debian, Mint, HTML5, CSS3, HTTP, Web, Internet, Machine Learning, AI, Neural
+      Nets, Protractor, Unit Testing, Quality, Professionalism ...
+      Create New Angular 4 Apps, Read Documentation, Write Tutorials, Contribute in Angular Repositories, Meet Her,
+      Hugs, Conversation, Laugh, Enjoy ... You only live once. Live Life to the Max.
+      If you want something in Life, you have to get it. Take Risks, Calculated Risks. Risk Lover. Risk Taker.
+      Adrenalyne. Life on the Edge. Code Edge ... I love you ... I have met my hero, he is me ... Count everything,
+      COUNT everything, calculate everything, Numbers ... YOLO!!! Source Code ... The Truth is in the Code ... Github,
+      Open Source, Future ... Technology, Spaceships, Timetravel ... I love you so much my baby ... node_modules ...
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>

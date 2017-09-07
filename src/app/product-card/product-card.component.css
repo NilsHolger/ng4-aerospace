@@ -1,0 +1,18 @@
+.card-img-top {
+    height: 400px;
+}
+.active {
+  color: white !important;
+}
+
+.card-footer {
+  padding: 0;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card-footer button {
+  cursor: pointer;
+}

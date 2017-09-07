@@ -1,0 +1,46 @@
+<nav class="navbar navbar-toggleable-md fixed-top navbar-inverse bg-primary">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+  <a class="navbar-brand" routerLink="/">Angular 4 Aerospace</a>
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/welcome">Welcome</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/shopping-cart">
+          Shopping Cart
+          <span class="badge badge-success badge-pill" *ngIf="cart$ | async as cart">
+            {{ cart.totalItemsCount }}</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/animations">Animations</a>
+      </li>
+      <ng-template #anonymousUser>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login">Log In</a>
+        </li>
+      </ng-template>
+      <li ngbDropdown *ngIf="user; else anonymousUser"
+          class="nav-item dropdown">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" data-toggle="dropdown"
+          id="userName">{{ user.name }}<span class="caret"></span></a>
+          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="download">
+            <a class="dropdown-item" routerLink="/my/orders">My Orders</a>
+            <ng-container *ngIf="user.isAdmin">
+              <a class="dropdown-item" routerLink="/admin/orders">Manage Orders</a>
+              <a class="dropdown-item" routerLink="/admin/products">Manage Products</a>
+            </ng-container>
+            <a class="dropdown-item" (click)="logout()">Log Out</a>
+          </div>
+        </li>
+    </ul>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="text" #query placeholder="Search ...">
+      <button class="btn btn-secondary my-2 my-sm-0" (click)="onSearch(query.value); query.value = ''"
+      type="button">Search</button>
+    </form>
+  </div>
+</nav>

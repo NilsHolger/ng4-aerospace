@@ -1,0 +1,20 @@
+<div class="card card-inverse card-info">
+  <div class="card-block">
+    <h4 class="card-title">Your Purchases Summary</h4>
+    <p class="card-text">You have {{ cart?.totalItemsCount }} items in your shopping cart.</p>
+    <ul class="list-group-flush">
+      <li *ngFor="let item of cart?.items" class="card-blockquote">
+          {{ item.quantity }} x {{ item.title }}
+          <div class="float-right">
+              {{ item?.totalPrice | currency:'EUR':true }}
+          </div>
+      </li>
+      <li class="card-blockquote font-weight-bold">
+          Total:
+          <div class="float-right">
+              {{ cart?.totalPrice | currency:'EUR':true }}
+          </div>
+      </li>
+    </ul>
+  </div>
+</div>

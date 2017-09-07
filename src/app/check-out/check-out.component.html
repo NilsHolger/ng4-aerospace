@@ -1,0 +1,9 @@
+<h2>In Flight Delivery</h2>
+<div class="row" *ngIf="cart$ | async as cart">
+  <div class="col-6">
+    <app-flying-form [cart]="cart"></app-flying-form>
+  </div>
+  <div class="col-6">
+    <app-shopping-cart-summary [cart]="cart"></app-shopping-cart-summary>
+  </div>
+</div>
